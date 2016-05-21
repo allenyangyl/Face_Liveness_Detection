@@ -1,0 +1,45 @@
+This code has been provided only for research purposes. If you want to use this for commerical purposes, you will need an appropriate license. Contact the email address below. Although care has been taken to collect this code, we do not assume any liability for any errors or incomplete files. Moreover, we are not responsible for any loss, financial or physical, that  results from any use of whole or part of the provided code in any situation.
+
+If you decide to use this code and report results in a publication, please refer to the publication:
+
+R. Chaudhry, A. Ravichandran, G. Hager and R. Vidal
+Histograms of Oriented Optical Flow and Binet-Cauchy Kernels on Nonlinear Dynamical Systems for the Recognition of Human Actions
+CVPR 2009
+
+(c) Rizwan Chaudhry - JHU Vision Lab
+
+For questions and bug reports, contact Rizwan Chaudhry at rizwanch@cis.jhu.edu
+
+Usage:
+
+gradientHistogram.m 
+
+  Extract HOOF features from a frame of optical flow
+
+identifySestemUsingKPCA.m
+
+  Use predefined kernels (in this case the ones provided for histograms) to compute the system parameters for the NLDS using KPCA.
+  computeDistanceModularHistogram
+    MDPA distance between two modular histograms.
+  computeDistanceOrdinalHistogram
+    MDPA distance between two ordinal (regular) histograms.
+  chiSquareDist.m
+    Chi-square distance between two histograms.
+  histKernel.m
+    Histogram intersection kernel
+
+computeDistancesBetweenKPCASystems.m
+
+  Compute several all-pair distances between NLDS identified using the appropriate kernels
+
+  findSubspaceAnglesBetweenKPCASystems.m
+    Compute subspace angles between NLDS to compute Martin distance
+  traceKernelKPCASystems.m
+    Compute the Binet-Cauchy trace kernel between NLDS
+
+
+
+For faster implementation when the kernel used is the square-root representation, use PCA on the square-root representation and use regular metrics for LDS.
+
+findSubspaceAnglesBetweenKPCASystemsSqrtHist.m
+traceKernelKPCASystemsSqrtHist
